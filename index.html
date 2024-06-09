@@ -5,6 +5,11 @@
   </head>
   <body>
     <div id="star-pattern"></div>
+    <div id="cursor">
+  <img 
+    src="https://assets.codepen.io/1468070/Arrow+-+Cursor.png" 
+    alt="Arrow Cursor" 
+  />
   </body>
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
@@ -16,6 +21,8 @@
     border-radius: 10px;
     width: 80px;
   }
+  body {
+    cursor: none;
   optgroup {
     background: #270142;
     color: #d69cff;
@@ -131,5 +138,16 @@
   opacity: 0.10;
   animation: pan 180s linear infinite;
   will-change: background-position;
+}
+  #cursor {
+  height: 2rem;
+  position: absolute;
+  z-index: 100;
+  pointer-events: none;
+}
+
+#cursor > img {
+  height: 100%;
+  width: 100%;
 }
 </style>
