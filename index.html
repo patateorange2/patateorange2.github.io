@@ -11,6 +11,27 @@
     alt="Arrow Cursor" 
   />
   </body>
+<script>
+  const updateLastMousePosition = position => last.mousePosition = position;
+
+const adjustLastMousePosition = position => {
+  if(last.mousePosition.x === 0 && last.mousePosition.y === 0) {
+    last.mousePosition = position;
+  }
+};
+
+const moveCursor = e => {  
+  cursor.style.left = `${e.clientX}px`;
+  cursor.style.top = `${e.clientY}px`;
+}
+
+const handleOnMove = e => {
+  const mousePosition = { x: e.clientX, y: e.clientY }
+  
+  moveCursor(e);
+  
+  adjustLastMousePosition(mousePosition);
+</script>
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
   select {
