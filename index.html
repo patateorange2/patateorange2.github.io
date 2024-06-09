@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Placeholder title</title>
+  </head>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+  select {
+    padding: 3px;
+    border: 1px solid #9600ff;
+    background: #270142;
+    color: #d69cff;
+    border-radius: 10px;
+    width: 80px;
+  }
+  optgroup {
+    background: #270142;
+    color: #d69cff;
+  }
+  option {
+    background: #270142;
+    color: #d69cff;
+  }
+
+  * {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    transform: scale(1.03);
+  }
+  *:focus {
+    outline: none;
+  }
+  body {
+    overflow: hidden;
+    background: #270142;
+    color: #d69cff;
+    text-shadow: 0 0 10px #9600ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+  }
+  input {
+    transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.675),
+      box-shadow 0.4s ease;
+    background: #270142;
+    color: #d69cff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    border: 1px solid #9600ff;
+  }
+  input:focus {
+    outline: #f7ebff;
+    box-shadow: 0 0 0 4px #f7ebff;
+    width: 350px;
+  }
+  button {
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.4s ease, background-color 0.4s ease,
+      borde-color 0.4s ease, box-shadow 0.4s ease;
+    background: #d69cff;
+    font-weight: 800;
+    border: 1px solid #101010;
+    color: #101010;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  button:hover:not(button:disabled) {
+    color: #d69cff;
+    background: #9600ff;
+    border-color: #d69cff;
+    box-shadow: 0 0 0 2px #d69cff;
+  }
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  button:active {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.548);
+    outline: none;
+  }
+  #format {
+    width: 60px;
+  }
+  ::selection {
+    background: rgba(255, 68, 0, 0.418);
+    color: rgb(231, 173, 152);
+  }
+  table {
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  td {
+    padding: 10px;
+    border: 1px #de94ff;
+    width: 150px;
+    height: fit-content;
+    font-size: 10px;
+  }
+  .inputs {
+    margin-top: 10px;
+  }
+  label {
+    font-size: 16px;
+  }
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+</style>
