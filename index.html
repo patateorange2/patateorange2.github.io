@@ -5,33 +5,7 @@
   </head>
   <body>
     <div id="star-pattern"></div>
-    <div id="cursor">
-  <img 
-    src="https://assets.codepen.io/1468070/Arrow+-+Cursor.png" 
-    alt="Arrow Cursor" 
-  />
   </body>
-<script>
-  const updateLastMousePosition = position => last.mousePosition = position;
-
-const adjustLastMousePosition = position => {
-  if(last.mousePosition.x === 0 && last.mousePosition.y === 0) {
-    last.mousePosition = position;
-  }
-};
-
-const moveCursor = e => {  
-  cursor.style.left = `${e.clientX}px`;
-  cursor.style.top = `${e.clientY}px`;
-}
-
-const handleOnMove = e => {
-  const mousePosition = { x: e.clientX, y: e.clientY }
-  
-  moveCursor(e);
-  
-  adjustLastMousePosition(mousePosition);
-</script>
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
   select {
@@ -74,7 +48,7 @@ const handleOnMove = e => {
     padding: 0;
     margin: 0;
     flex-direction: column;
-    cursor: none;
+    cursor: url('purple star.png'),auto;
   }
   input {
     transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.675),
