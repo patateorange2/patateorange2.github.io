@@ -33,13 +33,13 @@
   }
 
   * {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Nunito", sans-serif;
-    transform: scale(1.03);
-  }
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  transform: scale(1.03);
+}
   *:focus {
     outline: none;
   }
@@ -51,7 +51,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Full viewport height */
+  height: 100vh; /* Full height of viewport */
   padding: 0;
   margin: 0;
   flex-direction: column;
@@ -64,16 +64,16 @@
   color: #d69cff;
   padding: 10px;
   border-radius: 10px;
-  width: 80%; /* Make input width more fluid */
-  max-width: 300px; /* Limit input width */
+  width: 100%;  /* Let the input take full width available */
+  max-width: 400px;  /* Limit max-width for better appearance */
   border: 1px solid #9600ff;
 }
   input:focus {
   outline: #f7ebff;
   box-shadow: 0 0 0 4px #f7ebff;
-  width: 85%; /* Adjust input focus width */
+  width: 100%;
 }
- button {
+button {
   cursor: pointer;
   margin-left: 10px;
   transition: color 0.4s ease, background-color 0.4s ease,
@@ -84,8 +84,8 @@
   color: #101010;
   border-radius: 10px;
   padding: 10px;
-  width: 80%; /* Make button width more fluid */
-  max-width: 200px; /* Limit button width */
+  width: auto;  /* Let the button resize based on content */
+  max-width: 250px;  /* Add max-width to prevent stretching too wide */
 }
   button:hover:not(button:disabled) {
     color: #d69cff;
@@ -144,9 +144,7 @@
   will-change: background-position;
 }
 
-h1, h3, button {
-  margin: 10px 0;
-}
+
 
   #cursor {
   height: 2rem;
@@ -158,5 +156,58 @@ h1, h3, button {
 #cursor > img {
   height: 100%;
   width: 100%;
+}
+
+    @media screen and (max-width: 600px) {
+  body {
+    padding: 10px; /* Add padding on mobile */
+    flex-direction: column; /* Ensure stacking layout */
+    align-items: center; /* Center content */
+  }
+
+  #star-pattern {
+    background-size: 15%;  /* Scale down the star pattern */
+  }
+
+  button {
+    width: 100%;  /* Button takes full width */
+    padding: 12px; /* Adjust padding for better touch usability */
+  }
+
+  input {
+    width: 100%;  /* Input takes full width */
+    padding: 12px; /* Adjust padding */
+  }
+}
+
+    @media screen and (max-width: 768px) {
+  button {
+    width: 80%;  /* Button takes 80% width */
+    padding: 12px;
+  }
+
+  input {
+    width: 80%;  /* Input takes 80% width */
+    padding: 12px;
+  }
+
+  #star-pattern {
+    background-size: 12%;  /* Slightly larger star pattern for tablets */
+  }
+}
+
+    @media screen and (min-width: 1024px) {
+  button {
+    width: auto;  /* Default button width */
+  }
+
+  input {
+    width: 100%;
+    max-width: 400px;  /* Limit input width */
+  }
+
+  #star-pattern {
+    background-size: 10%;  /* Default background size for larger screens */
+  }
 }
 </style>
