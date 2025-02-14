@@ -51,7 +51,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height */
+  height: 100%; /* Full viewport height */
   padding: 0;
   margin: 0;
   flex-direction: column;
@@ -130,7 +130,7 @@
   }
   #star-pattern {
   background-image: url("https://raw.githubusercontent.com/patateorange2/patateorange2.github.io/main/purple%20star.png");
-  background-size: flex;  /* Adjust background size */
+  background-size: 2%;  /* Adjust background size */
   position: absolute;
   left: 50%;
   top: 0px;
@@ -142,6 +142,10 @@
   opacity: 0.10;
   animation: pan 180s linear infinite;
   will-change: background-position;
+}
+
+h1, h3, button {
+  margin: 10px 0;
 }
 
   #cursor {
