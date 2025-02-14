@@ -1,11 +1,8 @@
-
-<!DOCTYPE html>
-<html>
-  <head>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
     <link rel="icon" href="purple star 2 .png">
-    <!-- Meta tag for responsive design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <div id="star-pattern"></div>
@@ -15,29 +12,12 @@
     <br>
     <br>
     <button>Enter Main Website</button>
-  </body>
+  
+
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-
-    select {
-      padding: 3px;
-      border: 1px solid #9600ff;
-      background: #270142;
-      color: #d69cff;
-      border-radius: 10px;
-      width: 80px;
-    }
-
-    optgroup {
-      background: #270142;
-      color: #d69cff;
-    }
-
-    option {
-      background: #270142;
-      color: #d69cff;
-    }
-
+    
+    /* General Reset */
     * {
       text-align: center;
       margin: 0;
@@ -46,11 +26,11 @@
       font-family: "Nunito", sans-serif;
       transform: scale(1.03);
     }
-
+    
     *:focus {
       outline: none;
     }
-
+    
     body {
       overflow: hidden;
       background: #270142;
@@ -59,29 +39,22 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      padding: 0;
+      height: 100vh;  /* Full viewport height */
       margin: 0;
+      padding: 0;
       flex-direction: column;
       cursor: url('cursor.png'), auto;
+      font-size: 1rem;
+    }
+    
+    h1 {
+      font-size: 2rem; /* Scalable font size */
     }
 
-    input {
-      transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.675), box-shadow 0.4s ease;
-      background: #270142;
-      color: #d69cff;
-      padding: 10px;
-      border-radius: 10px;
-      width: 300px;
-      border: 1px solid #9600ff;
+    h3 {
+      font-size: 1.2rem;
     }
-
-    input:focus {
-      outline: #f7ebff;
-      box-shadow: 0 0 0 4px #f7ebff;
-      width: 350px;
-    }
-
+    
     button {
       cursor: pointer;
       margin-left: 10px;
@@ -91,58 +64,25 @@
       border: 1px solid #101010;
       color: #101010;
       border-radius: 10px;
-      padding: 10px;
+      padding: 12px 24px;
+      font-size: 1rem;
     }
-
+    
     button:hover:not(button:disabled) {
       color: #d69cff;
       background: #9600ff;
       border-color: #d69cff;
       box-shadow: 0 0 0 2px #d69cff;
     }
-
+    
     button:disabled {
       opacity: 0.5;
       cursor: not-allowed;
     }
-
+    
     button:active {
       box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.548);
       outline: none;
-    }
-
-    #format {
-      width: 60px;
-    }
-
-    ::selection {
-      background: rgba(255, 68, 0, 0.418);
-      color: rgb(231, 173, 152);
-    }
-
-    table {
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-
-    td {
-      padding: 10px;
-      border: 1px #de94ff;
-      width: 150px;
-      height: fit-content;
-      font-size: 10px;
-    }
-
-    .inputs {
-      margin-top: 10px;
-    }
-
-    label {
-      font-size: 16px;
-    }
-
-    ::-webkit-scrollbar {
-      width: 0;
     }
 
     #star-pattern {
@@ -151,14 +91,72 @@
       position: absolute;
       left: 50%;
       top: 0px;
-      translate: -50% 0%;
+      transform: translateX(-50%);
       z-index: 1;
       height: 100%;
       width: 100%;
-      min-width: 1200px;
       opacity: 0.10;
       animation: pan 180s linear infinite;
       will-change: background-position;
+    }
+
+    /* Input Styles */
+    input {
+      transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.675), box-shadow 0.4s ease;
+      background: #270142;
+      color: #d69cff;
+      padding: 10px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 350px;
+      border: 1px solid #9600ff;
+    }
+
+    input:focus {
+      outline: #f7ebff;
+      box-shadow: 0 0 0 4px #f7ebff;
+      width: 90%;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h3 {
+        font-size: 1rem;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+
+      input {
+        width: 90%;
+        padding: 8px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        font-size: 0.9rem;
+      }
+
+      button {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+      }
+
+      input {
+        width: 100%;
+        padding: 6px;
+      }
     }
 
     #cursor {
@@ -169,60 +167,18 @@
     }
 
     #cursor > img {
-      height: 50%;
-      width: 50%;
+      height: 100%;
+      width: 100%;
+    }
+    
+    /* Style for the scrollbar */
+    ::-webkit-scrollbar {
+      width: 0;
     }
 
-    /* Media queries for smaller screens */
-    @media screen and (max-width: 768px) {
-      body {
-        padding: 20px;
-      }
-
-      h1 {
-        font-size: 1.5em;
-      }
-
-      h3 {
-        font-size: 1em;
-      }
-
-      button {
-        width: 100%;
-        padding: 15px;
-        font-size: 1.2em;
-      }
-
-      input {
-        width: 90%;
-      }
-
-      #star-pattern {
-        background-size: 5%;
-      }
-    }
-
-    @media screen and (max-width: 480px) {
-      h1 {
-        font-size: 1.2em;
-      }
-
-      h3 {
-        font-size: 0.8em;
-      }
-
-      button {
-        font-size: 1em;
-        padding: 10px;
-      }
-
-      input {
-        width: 80%;
-      }
-
-      #star-pattern {
-        background-size: 10%;
-      }
+    ::selection {
+      background: rgba(255, 68, 0, 0.418);
+      color: rgb(231, 173, 152);
     }
   </style>
-</html>
+</body></html>
