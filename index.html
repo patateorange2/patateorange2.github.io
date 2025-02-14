@@ -82,6 +82,10 @@
     color: #101010;
     border-radius: 10px;
     padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   button:hover:not(button:disabled) {
     color: #d69cff;
@@ -129,8 +133,8 @@
   background-size: 2%;  
   position: absolute;
   left: 50%;
-  top: 0px;
-  translate: -50% 0%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
   height: 100%;
   width: 100%;
@@ -147,7 +151,7 @@
 }
 
 #cursor > img {
-  height: 100%;
-  width: 100%;
+  height: 75%;
+  width: 75%;
 }
 </style>
