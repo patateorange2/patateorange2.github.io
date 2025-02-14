@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
     <link rel="icon" href="purple star 2 .png">
   </head>
@@ -33,60 +32,57 @@
   }
 
   * {
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
-  transform: scale(1.03);
-}
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    transform: scale(1.03);
+  }
   *:focus {
     outline: none;
   }
   body {
-  overflow: hidden;
-  background: #270142;
-  color: #d69cff;
-  text-shadow: 0 0 10px #9600ff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full height of viewport */
-  padding: 0;
-  margin: 0;
-  flex-direction: column;
-  cursor: url('cursor.png'), auto;
-}
+    overflow: hidden;
+    background: #270142;
+    color: #d69cff;
+    text-shadow: 0 0 10px #9600ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    cursor: url('cursor.png'),auto;
+  }
   input {
-  transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.675),
-    box-shadow 0.4s ease;
-  background: #270142;
-  color: #d69cff;
-  padding: 10px;
-  border-radius: 10px;
-  width: 100%;  /* Let the input take full width available */
-  max-width: 400px;  /* Limit max-width for better appearance */
-  border: 1px solid #9600ff;
-}
+    transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.675),
+      box-shadow 0.4s ease;
+    background: #270142;
+    color: #d69cff;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    border: 1px solid #9600ff;
+  }
   input:focus {
-  outline: #f7ebff;
-  box-shadow: 0 0 0 4px #f7ebff;
-  width: 100%;
-}
-button {
-  cursor: pointer;
-  margin-left: 10px;
-  transition: color 0.4s ease, background-color 0.4s ease,
-    border-color 0.4s ease, box-shadow 0.4s ease;
-  background: #d69cff;
-  font-weight: 800;
-  border: 1px solid #101010;
-  color: #101010;
-  border-radius: 10px;
-  padding: 10px;
-  width: auto;  /* Let the button resize based on content */
-  max-width: 250px;  /* Add max-width to prevent stretching too wide */
-}
+    outline: #f7ebff;
+    box-shadow: 0 0 0 4px #f7ebff;
+    width: 350px;
+  }
+  button {
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.4s ease, background-color 0.4s ease,
+      borde-color 0.4s ease, box-shadow 0.4s ease;
+    background: #d69cff;
+    font-weight: 800;
+    border: 1px solid #101010;
+    color: #101010;
+    border-radius: 10px;
+    padding: 10px;
+  }
   button:hover:not(button:disabled) {
     color: #d69cff;
     background: #9600ff;
@@ -130,7 +126,7 @@ button {
   }
   #star-pattern {
   background-image: url("https://raw.githubusercontent.com/patateorange2/patateorange2.github.io/main/purple%20star.png");
-  background-size: 2%;  /* Adjust background size */
+  background-size: 2%;  
   position: absolute;
   left: 50%;
   top: 0px;
@@ -143,9 +139,6 @@ button {
   animation: pan 180s linear infinite;
   will-change: background-position;
 }
-
-
-
   #cursor {
   height: 2rem;
   position: absolute;
@@ -156,58 +149,5 @@ button {
 #cursor > img {
   height: 100%;
   width: 100%;
-}
-
-    @media screen and (max-width: 600px) {
-  body {
-    padding: 10px; /* Add padding on mobile */
-    flex-direction: column; /* Ensure stacking layout */
-    align-items: center; /* Center content */
-  }
-
-  #star-pattern {
-    background-size: 15%;  /* Scale down the star pattern */
-  }
-
-  button {
-    width: 100%;  /* Button takes full width */
-    padding: 12px; /* Adjust padding for better touch usability */
-  }
-
-  input {
-    width: 100%;  /* Input takes full width */
-    padding: 12px; /* Adjust padding */
-  }
-}
-
-    @media screen and (max-width: 768px) {
-  button {
-    width: 80%;  /* Button takes 80% width */
-    padding: 12px;
-  }
-
-  input {
-    width: 80%;  /* Input takes 80% width */
-    padding: 12px;
-  }
-
-  #star-pattern {
-    background-size: 12%;  /* Slightly larger star pattern for tablets */
-  }
-}
-
-    @media screen and (min-width: 1024px) {
-  button {
-    width: auto;  /* Default button width */
-  }
-
-  input {
-    width: 100%;
-    max-width: 400px;  /* Limit input width */
-  }
-
-  #star-pattern {
-    background-size: 10%;  /* Default background size for larger screens */
-  }
 }
 </style>
