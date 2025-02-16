@@ -121,6 +121,15 @@ document.body.onmouseleave = () => updateLastMousePosition(originPosition);
       
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+    @keyframes pan {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
 
       :root {
   --glow-rgb: 59 100 249;
@@ -294,5 +303,7 @@ document.body.onmouseleave = () => updateLastMousePosition(originPosition);
       background: rgba(255, 68, 0, 0.418);
       color: rgb(231, 173, 152);
     }
+        
+        
   </style>
 </body></html>
