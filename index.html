@@ -121,6 +121,16 @@ document.body.onmouseleave = () => updateLastMousePosition(originPosition);
       
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+      :root {
+  --glow-rgb: 59 100 249;
+
+
+.glow-point {
+  position: absolute;
+  box-shadow: 0rem 0rem 1.2rem 0.6rem rgb(var(--glow-rgb));
+  pointer-events: none;
+}
     
     /* General Reset */
     * {
